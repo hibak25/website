@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Virtual Farm Study | Academic Summary</title>
+  <style>
+    :root {
+      --bg: #f7f8fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --accent: #1d4ed8;
+      --accent-soft: #dbeafe;
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: "Inter", "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(180deg, #fbfcfe 0%, var(--bg) 100%);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .container {
+      width: min(1100px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 32px 0 56px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 100%);
+      color: #fff;
+      border-radius: 24px;
+      padding: 44px 32px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -40px -60px auto;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.12);
+      filter: blur(2px);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #bfdbfe;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.15;
+      max-width: 16ch;
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 760px;
+      color: #e5eefc;
+      font-size: 1.05rem;
+    }
+
+    .section {
+      margin-top: 30px;
+    }
+
+    .section h2 {
+      font-size: 1.45rem;
+      margin: 0 0 14px;
+      color: #0f172a;
+      letter-spacing: -0.02em;
+    }
+
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: -18px;
+    }
+
+    .stat-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+      min-height: 155px;
+    }
+
+    .stat-label {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .stat-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .stat-card strong {
+      color: var(--text);
+      display: block;
+      margin-top: 4px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 18px;
+    }
+
+    .list {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .list li { margin-bottom: 10px; }
+
+    .quote {
+      border-left: 4px solid var(--accent);
+      padding: 14px 16px;
+      background: #f8fbff;
+      border-radius: 12px;
+      color: #334155;
+      margin: 0;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      min-width: 560px;
+    }
+
+    th, td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+    }
+
+    th {
+      background: #f8fafc;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    tr:last-child td { border-bottom: none; }
+
+    .footer {
+      margin-top: 28px;
+      padding: 18px 6px 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .ref {
+      font-family: Georgia, "Times New Roman", serif;
+      font-style: italic;
+    }
+
+    @media (max-width: 920px) {
+      .overview-grid,
+      .two-col {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container { width: min(100% - 20px, 1100px); }
+      .hero { padding: 34px 22px; border-radius: 20px; }
+      .overview-grid,
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+      .panel, .stat-card { padding: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <section class="hero">
+      <span class="eyebrow">Academic one-page summary</span>
+      <h1>Virtual Farm Study for Elementary Science Education</h1>
+      <p>
+        A clean, elegant webpage layout for presenting the study on a virtual farm as an educational tool for elementary science learning.
+      </p>
+    </section>
+
+    <section class="overview-grid" aria-label="Study overview">
+      <article class="stat-card">
+        <span class="stat-label">Focus</span>
+        <strong>What the study examined</strong>
+        <p>The use of a virtual reality farm to support learning in elementary science, especially plant growth and poultry raising.</p>
+      </article>
+      <article class="stat-card">
+        <span class="stat-label">Sample</span>
+        <strong>Who participated</strong>
+        <p>Four 3rd-grade classes from an elementary school in Hsinchu, with 69 students in the experimental group and 70 in the control group.</p>
+      </article>
+      <article class="stat-card">
+        <span class="stat-label">Statistics</span>
+        <strong>Main numerical result</strong>
+        <p>The experimental group showed a larger gain than the control group, and ANCOVA found a significant difference.</p>
+      </article>
+      <article class="stat-card">
+        <span class="stat-label">Findings</span>
+        <strong>What students reported</strong>
+        <p>Students described the system as realistic, interesting, easy to use, and helpful for learning.</p>
+      </article>
+    </section>
+
+    <section class="section two-col">
+      <div class="panel">
+        <h2>Introduction</h2>
+        <p>
+          This study explores how virtual reality and distance learning can make agricultural science more engaging for young learners.
+          The authors built a farm-like online environment where students can practice learning through interaction rather than only reading text.
+        </p>
+        <p>
+          The design is based on situated learning, which emphasizes learning through meaningful context and authentic activity.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h2>Study Example</h2>
+        <p class="quote">
+          Students can plant vegetables, water crops, weed gardens, hatch eggs, and care for poultry while observing growth stages in the virtual farm.
+        </p>
+        <ul class="list" style="margin-top: 14px;">
+          <li>Vegetable growth activities.</li>
+          <li>Poultry care and hatching.</li>
+          <li>Discussion forum for sharing experiences.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>What Is This Study About?</h2>
+      <div class="panel">
+        <p>
+          The study is about developing a virtual farm that lets users play the role of a farmer.
+          Students can learn about common plants and animals by observing them in a simulated environment and completing tasks that match real farm life.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>What Does This Study Find?</h2>
+      <div class="panel">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Group</th>
+                <th>Pretest Average</th>
+                <th>Pretest SD</th>
+                <th>Posttest Average</th>
+                <th>Posttest SD</th>
+                <th>Difference</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Control</td>
+                <td>61.23</td>
+                <td>17.65</td>
+                <td>78.21</td>
+                <td>16.31</td>
+                <td>16.98</td>
+              </tr>
+              <tr>
+                <td>Experimental</td>
+                <td>58.30</td>
+                <td>17.01</td>
+                <td>84.36</td>
+                <td>11.65</td>
+                <td>26.06</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <ul class="list" style="margin-top: 16px;">
+          <li>The groups had similar regression slopes, <strong>F = 0.71</strong>, <strong>p = .40</strong>.</li>
+          <li>The ANCOVA showed a significant difference between groups, <strong>F = 15.87</strong>, <strong>p = .001</strong>.</li>
+          <li>The achievement test reliability was strong, with <strong>Cronbach’s alpha = 0.94</strong>.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section two-col">
+      <div class="panel">
+        <h2>Scientific Relevance</h2>
+        <p>
+          This study is scientifically relevant because it uses a quasi-experimental design with a control group and pretest-posttest comparison.
+          It does not rely only on opinions; it measures learning achievement statistically and supplements that with questionnaires, observation, and interviews.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h2>Conclusion</h2>
+        <p>
+          Overall, the study shows that a virtual farm can improve motivation and achievement in elementary science education.
+          The results support the value of interactive, context-based learning environments for young students.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Reference</h2>
+      <div class="panel ref">
+        Tarng, W., Chang, M.-Y., Ou, K.-L., Yu, K.-F., &amp; Hsieh, K.-R. (2012). <em>The development of a virtual farm for applications in elementary science education</em>. International Journal of Distance Education Technologies, 10(2), 1–16.
+      </div>
+    </section>
+
+    <div class="footer">
+      Prepared as a polished GitHub Pages one-page academic layout.
+    </div>
+  </main>
+</body>
+</html>
